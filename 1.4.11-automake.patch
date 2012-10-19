@@ -1,0 +1,18 @@
+--- origsrc/libpng-1.4.11/configure.ac	2012-03-29 00:02:36.000000000 -0500
++++ src/libpng-1.4.11/configure.ac	2012-05-01 23:42:41.544849600 -0500
+@@ -87,7 +87,6 @@ else
+     have_solaris_ld=no
+     AC_MSG_RESULT(no)
+ fi
+-AM_CONDITIONAL(HAVE_SOLARIS_LD, test "$have_solaris_ld" = "yes")
+ 
+ if test "$have_solaris_ld" = "yes"; then
+     GLD=`$LD --help < /dev/null 2>&1 | grep 'M mapfile'`
+@@ -107,6 +106,7 @@ fi
+ esac
+ 
+ AM_CONDITIONAL(HAVE_LD_VERSION_SCRIPT, test "$have_ld_version_script" = "yes")
++AM_CONDITIONAL(HAVE_SOLARIS_LD, test "$have_solaris_ld" = "yes")
+ 
+ if test "$have_ld_version_script" = "yes"; then
+     AC_MSG_CHECKING([for symbol prefix])
