@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross
 
 NAME="mingw64-x86_64-libpng"
-VERSION=1.5.18
+VERSION=1.6.16
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="PNG graphics library for Win64 toolchain"
@@ -13,8 +13,7 @@ mingw64-x86_64-gcc cross compiler, and installs into the
 HOMEPAGE="http://www.libpng.org/pub/png/libpng.html"
 SRC_URI="mirror://sourceforge/libpng/libpng-${VERSION}.tar.xz"
 SRC_DIR="libpng-${VERSION}"
-PATCH_URI="1.4.11-automake.patch"
 
-MAKEOPTS+=" dist_man_MANS= "
+MAKEOPTS+=" bin_PROGRAMS= dist_man_MANS= "
 
 KEEP_LA_FILES="none"
